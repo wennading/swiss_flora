@@ -1,4 +1,4 @@
-# r_BGB
+# Swiss flora
 
 (1). The Red List status follows specific codes: 
 Regionally extinct (RE=6), 
