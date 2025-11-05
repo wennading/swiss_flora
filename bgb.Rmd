@@ -54,10 +54,10 @@ plot(land_cover)
 ```{r life forms}
 library(dplyr)
 library(stringr)
-df <- read.csv("/Users/dingwenn/Nutstore Files/mynutshell/0-Research/Projects/1_BGB/data/InfoFlora/rawdata/1_Alps_dispersal_v2.csv",head=TRUE)
-df2 <- read.csv("/Users/dingwenn/Nutstore Files/mynutshell/0-Research/Projects/1_BGB/data/InfoFlora/1_dispersal_com.csv",head=TRUE)
+df <- read.csv("/data/InfoFlora/rawdata/1_Alps_dispersal_v2.csv",head=TRUE)
+df2 <- read.csv("data/InfoFlora/1_dispersal_com.csv",head=TRUE)
 merged_left  <- merge(df2, df, by = "species", all.x = TRUE)
-write.csv(merged_left,"/Users/dingwenn/Nutstore Files/mynutshell/0-Research/Projects/1_BGB/data/InfoFlora/1_dispersal_com_2.csv")
+write.csv(merged_left,"/data/InfoFlora/1_dispersal_com_2.csv")
 df <- df %>%
   mutate(species2 = word(sc_name, 1, 2))
 
